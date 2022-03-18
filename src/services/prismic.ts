@@ -1,6 +1,5 @@
 import * as prismic from "@prismicio/client";
 
-// Fill in your repository name
 export const repositoryName = "ignews156";
 const endpoint = prismic.getEndpoint(repositoryName);
 

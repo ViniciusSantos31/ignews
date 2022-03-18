@@ -65,6 +65,7 @@ export const getServerSideProps: GetServerSideProps = async ({
         day: "2-digit",
         month: "long",
         year: "numeric",
+        timeZone: "UTC",
       }
     ),
   };

@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 import { RichText } from "prismic-dom";
 import Link from "next/link";
 
-interface Post {
+export interface Post {
   slug: string;
   title: string;
   excerpt: string;
@@ -50,12 +50,13 @@ export const getStaticProps: GetStaticProps = async () => {
     excerpt:
       post.data.content.find((content: any) => content.type === "paragraph")
         ?.text ?? "",
-    updatedAt: new Date(post.last_publication_date).toLocaleDateString(
+    updatedAt: new Date(post.last_publication_date)?.toLocaleDateString(
       "pt-BR",
       {
         day: "2-digit",
         month: "long",
         year: "numeric",
+        timeZone: "UTC",
       }
     ),
   }));

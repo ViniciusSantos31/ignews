@@ -8,8 +8,6 @@ import { ActiveLink } from "../ActiveLink";
 export function Header() {
   const { asPath } = useRouter();
 
-  console.log(asPath);
-
   const isHome = asPath === "/";
 
   return (
@@ -20,7 +18,7 @@ export function Header() {
           <ActiveLink activeClassName={styles.active} href="/">
             <a>Home</a>
           </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/posts" prefetch>
+          <ActiveLink activeClassName={styles.active} href="/posts">
             <a>Posts</a>
           </ActiveLink>
         </nav>
